@@ -1,0 +1,21 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      spring.h2.console.settings.web-allow-others: false
+
+  datasource:
+    url: jdbc:h2:mem:testdb;
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+
+cloud:
+  aws:
+    region.static: us-east-1
+    s3:
+      bucketName: surya-tf-20220814124929636500000001
